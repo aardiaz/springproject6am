@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>api</title>
+</head>
+<body>
+
+<div th:insert="Header.html"></div>
+
+  <div class="container">
+  
+       <table>
+          <thead>
+             <tr bgcolor="yellow">
+                <td>UserId</td>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Body</td>
+             </tr>
+          </thead>
+          
+          <tbody id="cmtbody">
+          
+          </tbody>
+       
+       </table>
+  
+  </div>
+  
+  
+  <script type="text/javascript">
+    
+    $(document).ready(function() {
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/comments"
+        }).then(function(data) {
+        	
+        	var row = '';
+            
+        	for(var i=0; i<data.length; i++){
+        		
+        		row += '<tr bgcolor="skyblue">';
+        		
+        		      row += '<td>'+ data[i].postId+'</td>';
+        		      row += '<td>'+data[i].id+'</td>';
+        		      row += '<td>'+data[i].name+'</td>';
+        		      row += '<td>'+data[i].email+'</td>';
+        		      row += '<td>'+data[i].body+'</td>';
+        		
+        		row += '</tr>';
+        	}
+        	
+        	$('#cmtbody').append(row);
+        	
+        });
+    });
+    
+    </script>
+
+</body>
+</html>

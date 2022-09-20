@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>employee</title>
+ 
+</head>
+<body>
+
+<div th:insert="Header.html"></div>
+
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-info text-white text-center fs-2">
+				Employee Form</div>
+			<div class="card-body bg-primary">
+			
+			<form action="/employee" method="post" >
+
+				<div class="row p-2">
+					<div class="col-4 text-white">FirstName</div>
+					<div class="col-6 ">
+					  <input type="text" name="fname" class="form-control">
+					</div>
+				</div>
+				
+				
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">LastName</div>
+					<div class="col-6 ">
+					  <input type="text" name="lname" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Gender</div>
+					<div class="col-6 text-white ">
+					  <input type="radio" name="gender" value="male" > Male
+					  <input type="radio" name="gender" value="female" > FeMale
+					</div>
+				</div>
+				
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Phone</div>
+					<div class="col-6 ">
+					  <input type="text" name="phone" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Email</div>
+					<div class="col-6 ">
+					  <input type="email" name="email" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">DoB</div>
+					<div class="col-6 ">
+					  <input type="date" name="dob" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">JoinDate</div>
+					<div class="col-6 ">
+					  <input type="date" name="joinDate" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Company</div>
+					<div class="col-6 ">
+					  <input type="text" name="company" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Post</div>
+					<div class="col-6 ">
+					  <input type="text" name="post" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Department</div>
+					<div class="col-6 ">
+					  <input type="text" name="department" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Salary</div>
+					<div class="col-6 ">
+					  <input type="number" name="salary" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Projects</div>
+					<div class="col-6 text-white">
+					  <input type="checkbox" multiple="multiple" name="projects"  value="Project_1"> Project_1
+					  <input type="checkbox" multiple="multiple" name="projects"  value="Project_2" > Project_2
+					  <input type="checkbox" multiple="multiple" name="projects"  value="Project_3"> Project_3
+					  <input type="checkbox" multiple="multiple" name="projects"  value="Project_4"> Project_4
+					</div>
+				</div>
+				
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">Country</div>
+					<div class="col-6 ">
+					  <input type="text" name="address.country" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">City</div>
+					<div class="col-6 ">
+					  <input type="text" name="address.city" class="form-control">
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">State</div>
+					<div class="col-6 ">
+					  <select name="address.state" class="form-control">
+					   
+					     <option value=""> ------------ select ------------ </option>
+					     <option value="state-1">state-1 </option>
+					     <option value="state-2">state-2 </option>
+					     <option value="state-3">state-3 </option>
+					     <option value="state-4">state-4 </option>
+					     <option value="state-5">state-5 </option>
+					     <option value="state-6">state-6 </option>
+					     <option value="state-7">state-7 </option>
+					  </select>
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4 text-white">ZipCode</div>
+					<div class="col-6 ">
+					  <input type="text" name="address.zip" class="form-control">
+					</div>
+				</div>
+				
+				
+				<div class="row p-2">
+					<div class="col-4"></div>
+					<div class="col-6 ">
+					  <input type="submit" value="Add" class="btn btn-success">
+					</div>
+				</div>
+				
+				</form>
+				
+			</div>
+			<div class="card-footer bg-success text-white text-center fs-4">@copyright2022</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>
