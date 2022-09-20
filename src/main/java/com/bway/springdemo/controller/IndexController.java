@@ -11,6 +11,16 @@ public class IndexController {
 	public String indexPage() {
 		
 		return "LoginForm";
+		
+		
+		
 	}
+
+     
+     
+	 public void getMessage(){
+		 
+		 System.out.print("im from index controller");
+	 }
 
 }
